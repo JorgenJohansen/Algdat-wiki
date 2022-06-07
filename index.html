@@ -14,9 +14,9 @@
       <header class="bg-gray-800">
         <h1 class="font-sans font-bold text-white text-5xl text-center p-4 uppercase">Algdat Wiki</h1>
       </header>
-      <main class="grid grid-cols-6">
+      <main class="grid xl:grid-cols-6 md:grid-cols-4 grid-cols-1 gap-4">
 
-        <section id="sidebar" class="bg-gray-400 col-span-2">
+        <section id="sidebar" class="bg-gray-400 hidden md:block md:col-span-2">
           <div class="flex flex-col">
             <!-- Problemer og algoritmer -->
             <div class="flex flex-col">
@@ -57,7 +57,7 @@
             <!-- 4. Rangering i lineær tid -->
             <div class="flex flex-col">
               <h2 class="sidebar-title">4. Rangering i lineær tid</h2>
-              <a href="#" class="sidebar-links">Grensen for sammenligningsbasert sortering i worst case</a>
+              <a href="#" class="sidebar-links">Grensen for sammenligningsbasert sortering</a>
               <a href="#" class="sidebar-links">Stabil Sortering</a>
               <a href="#" class="sidebar-links">Counting Sort og Stabil Sortering</a>
               <a href="#" class="sidebar-links">Radix Sort og Stabil Subrutine</a>
@@ -177,7 +177,7 @@
           </div>
         </section>
         <!-- Alt innholdet her -->
-        <section id="content" class="bg-gray-400 col-span-4">
+        <section id="content" class="bg-gray-400 col-span-2 md:col-span-4">
           <div class="flex flex-col">
             <!-- Problemer og algoritmer -->
             <div class="flex flex-col">
@@ -244,146 +244,689 @@
             <div class="flex flex-col">
               <h2 class="content-title">2. Datastrukturer</h2>
               <h3 class="content-subtitle">Stakker og Køer</h3>
-              <p class="content-paragraph"></p>
+              <p class="content-paragraph">
+                <span>Stakker</span> er lister som har egenskapen av å være <span>FIFO(First In First Out)</span>, vi holder da styr på en top som er toppen av stakken 
+                og oppdateres når vi både setter inn <span>(Push)</span>  og henter ut <span>(Pop)</span>  data fra stakken. 
+                Eksempler på dette kan være en callstack med instruksjoner i et programmeringspråk, hvor hver instruksjon poppes av stacken og utføres. 
+              </p>
+              <p class="content-paragraph">
+                <span>Køer</span> er lister som har egenskapen å være <span>LIFO (Last In First Out)</span> som en vanlig kø i virkeligheten. 
+                Vi holder da styr på head (første element) og tail (siste element) i køen som oppdateres når vi setter inn data <span>(Enqueue)</span> eller henter ut data <span>(Dequeue)</span>. 
+                Vi har da ingen tilstand som stack-empty er og må da koble sammen tail og head når vi kommer til maks kapasitet, som er hvordan et ringbuffer fungerer. 
+              </p>
               <h3 class="content-subtitle">Lenkede Lister</h3>
+              <p class="content-paragraph">
+                Lenkede lister er lister med elementer som er koblet sammen med pekere. I List-search søker vi etter element og tar n tid. Både List-Insert og List-delete tar konstant tid. Dette kan brukes i uformell sortering og er viktig når man implemterer trær eller databaser hvor vi ønsker traversering, eller chaining hvor vi også bruker det sammen med en dynamisk tabell.
+                List-Search: Søker gjennom den lenkede lista med et lineær søk og returnerer pekeren til elementet vi ønsker å finne eller NIL. Dette tar Θ(n) tid.
+                List-Insert: Setter inn elementet i den lenkede lista foran, og tar O(1) tid.
+                List-Delete: Vi sletter et element ved å oppdatere pekerne til elementet, dette tar O(1) tid. For å finne elementet må vi kjøre List-Search og det tar Θ(n) tid.
+                List-Delete0: Oppdaterer pekerne.
+                List-Search0: Bruker en sentinel verdi L.NIL for å søke gjennom.
+                List-Insert0: Bruker en sentinel verdi L.NIL for innsetting.
+
+              </p>
               <h3 class="content-subtitle">Pekere og Objekter</h3>
+              <p class="content-paragraph">
+                Vi kan implementere pekere og objekter ved hjelp av minneplasseringer og enkle lister.
+              </p>
+
               <h3 class="content-subtitle">Direkte Adressering og Hashtabeller</h3>
+              <p class="content-paragraph">
+                Direkte adressering funker på den måten at vi får inn en nøkkel og få hentet ut en verdi i konstant tid. Hashtabeller er en datastruktur med key-value pairs som bruker direkte adressering.
+
+              </p>
+
               <h3 class="content-subtitle">Konfliktløsning med Kjeding</h3>
+              <p class="content-paragraph">
+                Vi bruker for å hindre at vi får kollisjoner når vi setter inn elementer i et hashmap med en hashfunksjon.
+                Chained-Hash-Insert: Setter inn elementet ved foran i lista. Tar O(1) tid.
+                Chained-Hash-Search: Søker etter et element med en nøkkel i lista. Tar Θ(n) tid.
+                Chained-Hash-Delete: Sletter elementet fra lista. Tar O(1) tid.
+                Vi ønsker her å ilegge en hashmap med forskjellige elementer ved hjelp av en hash, 
+                hvis vi da har en hash der flere elementer mapper til samme sted kan vi lage en lenket liste ut av elementene. 
+              </p>
+
               <h3 class="content-subtitle">Grunnleggende Hashfunksjoner</h3>
-              <h3 class="content-subtitle">mortisert Analyse</h3>
+              <p class="content-paragraph">
+                Tre forskjellige: h(k) = floor(mk), h(k) = k mod m(divisjonsmetoden), h(k) = floor(m(kA mod 1)) (multiplikasjonsmetoden)
+              </p>
+
+              <h3 class="content-subtitle">Amortisert Analyse</h3>
+              <p class="content-paragraph">
+                Amortisert analyse er gjennomsnittet av tiden vi trenger for å utføre en sekvens av datastruktur operasjoner over alle operasjoner utført. 
+                Det er ulikt average-case i at det ikke involverer sannsynlighet og gir gjennomsnittsutførelsen over hver operasjon i verste tilfelle.
+              </p>
+
               <h3 class="content-subtitle">Dynamiske Tabeller</h3>
+              <p class="content-paragraph">
+                Dette er lister som for hver gang de fylles opp allokerer (typisk) dobbelt så mye plass, og gjør at vi bare trenger å 
+                oppdatere listestørrelsen lg n ganger.
+                Table-insert(T, x): Vi starter med å sjekke om tabellen er tom, er det tilfelle lager vi en tabell med en rute og setter størrelsen til 1, 
+                Vi holder oversikt over hvor mange elementer vi har (num) og vil da i neste if sjekk, sjekke om den er det samme som størrelsen, 
+                hvis det er tilfelle lager vi en ny tabell med dobbelt så mye plass, setter inn alle elementene i denne tabellen, frigjører minnet i den gamle tabellen, setter innholdet av den nye tabellen inn i den gamle, og øker størrelsen til det dobbelte.
+                Til slutt setter i vi x inn i tabellen og inkrementer antallet(num)
+
+              </p>
+
             </div>
             <!-- Splitt og Hersk -->
             <div class="flex flex-col">
               <h2 class="content-title" >3. Splitt og Hersk</h2>
               <h3 class="content-subtitle">Designmetoden Divide and Conquer</h3>
+              <p class="content-paragraph">
+                Her deler vi opp problemet i delproblemer som er mindre instanser av det samme problemet. 
+                Så løser vi delprobelemene rekursivt, hvis de er små nok kan vi løse dem på en vanlig måte. 
+                Til slutt legger vi sammen løsningen til delproblemene til løsningen på det originale problemet.
+
+              </p>
               <h3 class="content-subtitle">Maximum Subarray-problemet</h3>
+              <p class="content-paragraph">
+                Dette er en algoritme som tar inn en liste av tall og så finner ut hvilket delliste som har den største summen. 
+                Dette kan da gjøres med splitt og hersk der løsningen vår ligger i den ene listen som er da delt opp, tar nlgn tid å finne løsningen. 
+                Det finnes også en måte som gir lineær tid uten å bruke splitt og hersk, Brute force ville tatt n^2 tid.
+
+              </p>
               <h3 class="content-subtitle">Bisect og Bisect0</h3>
+              <p class="content-paragraph">
+                Vi tar inn en sortert liste og en nøkkel, deretter sjekker vi om midt elementet av lista er større/mindre eller lik nøkkelen, 
+                da kan vi sette inn en ny liste med innholdet som er enten mindre eller større inn i et rekursivt kall med nøkkelen og fortsetter med 
+                dette til vi enten ikke har funnet nøkkelen er det er samme som midt elementet. Den har da O(lg n) kjøretid.
+              </p>
               <h3 class="content-subtitle">Merge Sort</h3>
+              <p class="content-paragraph">
+                Vi starter ned å dele opp lista som vi tar inn i 2 lister for hvert rekursive kall i første prosedyre helt til et element er i hver liste, 
+                deretter setter vi inn de i den originale listen ved å sammenligne  (dette blir da arbeidet som gjøres). 
+                Vi bruker da mer minne og flere lister(ikke in place), samtidig vil kjøretiden være Θ(nlgn) i beste case og worst case.
+
+              </p>
               <h3 class="content-subtitle">Quicksort og Randomized-Quicksort</h3>
+              <p class="content-paragraph">
+                Vi sorterer nå ved hjelp av en pivot(splittelement) som vi finner ved hjelp av partisjonering. 
+                Skiller da mellom store og små tall i sorteringen. I Randomized bruker vi da en tilfeldig pivot. 
+                Quicksort er da in place og bruker Θ(nlgn) i best-case og Θ(n^2) i worst case siden vi kan være ekstra uheldig med hvor splittelementet er, 
+                spesielt hvis vi tar inn en sortert sekvens.
+
+              </p>
               <h3 class="content-subtitle">substitusjon, Rekurrenstrær og masterteoremet</h3>
+              <p class="content-paragraph">
+                ubstitusjon gjør vi at vi kan verifisere løsningen vår med å sette inn det i rekurrensen. 
+                Rekursjonstrær gir oss mulighet til å dele opp kallene og se på alt arbeidet som er gjort i oppdelingene til sammen. 
+                Masterteoremet er en enkel måte å finne svar på rekurrenser på formen T(n) = aT(n/b) + f(n), 
+                hvor vi får 3 tilfeller avhengig av potensen til arbeidet f(n) i forhold til logba. 
+
+              </p>
               <h3 class="content-subtitle">Iterasjonsmetoden</h3>
+              <p class="content-paragraph">
+                Dette er en metode vi bruker for å lage en gjetning av rekurrensens kjøretid ved å sette inn nye verdier for T(n) helt til vi når et grunntilfelle. 
+                Vi vil da se et mønster dukke opp underveis som vi kan bruke. Substitusjonsmetoden er brukt for å bevise kjøretiden.
+              </p>
               <h3 class="content-subtitle">Variabelskifte</h3>
+              <p class="content-paragraph">
+                I variabelskifte bytter vi ut enkelte deler av likningen vår for å kunne lettere regne den ut ved hjelp av masterteoremet. 
+                Vi substituerer da delen med m, og bruker S(m) videre.
+
+              </p>
             </div>
             <!-- 4. Rangering i lineær tid -->
             <div class="flex flex-col">
               <h2 class="content-title">4. Rangering i lineær tid</h2>
               <h3 class="content-subtitle">Grensen for sammenligningsbasert sortering i worst case</h3>
+              <p class="content-paragraph">
+                Dette betegner en universal fartsgrense for hva som er lov til å sortere i verste tilfelle.
+              </p>
               <h3 class="content-subtitle">Stabil Sortering</h3>
+              <p class="content-paragraph">
+                Dette er en egenskap hos en sorteringsalgoritme hvor den ikke bytter om på like elementer i listen
+              </p>
               <h3 class="content-subtitle">Counting Sort og Stabil Sortering</h3>
+              <p class="content-paragraph">
+                Denne sorteringsalgoritmen tar inn en usortert sekvens og en maks element k, 
+                deretter bruker den 2 lister for å holde styr på indekser og hva som er størst at de ulike elementene for sortering. 
+                Den bruker da bare en tabell og allokerer ingen nye som i merge sort. Kjøretiden er da Θ(n + k)
+              </p>
               <h3 class="content-subtitle">Radix Sort og Stabil Subrutine</h3>
+              <p class="content-paragraph">
+                Her sorterer vi etter minst signifikante siffer, og grunnen til at den trenger en stabil subrutine er fordi vi ikke 
+                ønsker å bytte om på like elementer som kan slå ut når vi går til større siffer. Kjøretiden er da Θ(d*(n+k)).
+              </p>
               <h3 class="content-subtitle">Bucket Sort</h3>
+              <p class="content-paragraph">
+                Her sorterer vi ved å dele opp sekvensen vår i uniformelt store bøtter og deretter sortere de med insertion sort. 
+                Når dette er gjort setter vi alle bøttene sammen. I verste tilfelle er dette Θ(n^2), i beste tilfelle Θ(n).
+
+              </p>
               <h3 class="content-subtitle">Randomized-Select</h3>
+              <p class="content-paragraph">
+                Denne algoritmen fungerer slik som quicksort, men jobber bare på en side av oppdelingen. 
+                Den bruker da Randomized-Partition som en subrutine. Kjøretiden til algoritmen er Θ(n) i beste tilfelle og Θ(n^2) i verste tilfelle.
+              </p>
               <h3 class="content-subtitle">Select</h3>
+              <p class="content-paragraph">
+                Likt som Randomized-Select finner Select det tiltenkte elementet ved å rekursivt partisjonere inputlista. Vi garanterer da en god splitt av lista. 
+                Den bruker da deterministisk partisjonering modifisert til å ta element til partisjoneringen rundt som et input parameter. 
+              </p>
             </div>
             <!-- 5. Rotfaste Trestrukturer -->
             <div class="flex flex-col">
               <h2 class="content-title">5. Rotfaste trestrukturer</h2>
-              <h3 class="content-subtitle">Heaps og Prioritetskøer</h3>
+              <h3 class="content-subtitle">Heaps og Prioritetskøer</h3>¨
+              <p class="content-paragraph">
+                Heaps er et type tre der vi kan organisere og sortere vår informasjon, vi har da foreldre og løvnoder som kan byttes på 
+                for å respektere max/min-heap egenskapen. Vi kan da bruke en maks-heap til å holde styr på de største elementene våre, 
+                mens min-heap til å holde styr på de minste elementene våre, som kan brukes til en prioritetskø.
+                Parent: floor(Index/2)
+                Left: 2 * Index
+                Right: 2 * Index + 1
+                Max-heapify: Dette er en prosedyre som sikrer en heap som respekterer max-heap egenskapen hvor foreldre er alltid større enn sine barn. Bruker da O(lg n) tid.
+                Build-Max-Heap: Dette er en prosedyre som tar inn en liste og looper igjennom halve lista ned til 1 som da kaller på Max-Heapify med lista og indeksen. Bruker Θ(n)  tid.
+                Max-Heap-Insert: Setter inn et element i heapen. Bruker O(lg n) tid siden vi kaller på Max-Heapfiy.
+                Heap-Extract-Max: Fjerner og returnerer elementet i heapen med største nøkkel. Bruker O(lg n) tid.
+                Heap-Increase-Key: Øker verdien til et element x sin nøkkel til den nye verdien k som er antatt til å være minst like stor som x sin nåværende nøkkelverdi. Bruker O(lg n) tid.
+                Heap-Maximum: Henter da ut første element av heapen. Bruker Θ(1) tid.
+                Min-Heapify: Dette er en prosedyre som sikrer en heap som respekterer min-heap egenskapen hvor foreldre er alltid mindre enn sine barn.
+                Build-Min-Heap: Dette er en prosedyre som tar inn en liste og looper igjennom halve lista ned til 1 som da kaller på Min-Heapify med lista og indeksen. Bruker lineær tid.
+                Min-Heap-Insert: Setter inn et element i heapen. Bruker O(lg n) tid siden vi kaller på Min-Heapfiy.
+                Heap-Extract-Min: Fjerner og returnerer elementet i heapen med minste nøkkel. Bruker O(lg n) tid.
+                Heap-Decrease-Key: Minsker verdien til et element x sin nøkkel til den nye verdien k som er antatt til å være mindre eller lik x sin nåværende nøkkelverdi.
+                Heap-Minimum: Henter da ut første element av heapen. Bruker Θ(1) tid.
+                Høyde på heap: Θ(lg n)
+              </p>
               <h3 class="content-subtitle">Heapsort</h3>
-              <h3 class="content-subtitle">Implementering av rotfaste trør</h3>
+              <p class="content-paragraph">
+                Dette er en sorteringsalgoritme som bygger en maks heap for å så iterere gjennom lista fra lengden ned til 2, 
+                for å så i loopen bytte på A[1] og A[i], dekrementere på heap størrelsen og kalle på Max-Heapify.  
+                Kjøretiden er Θ(nlgn) i verste tilfelle og Θ(n) i beste tilfelle.
+
+              </p>
+              <h3 class="content-subtitle">Implementering av rotfaste trær</h3>
+              <p class="content-paragraph">
+                Vi kan representere hver node av treet som et objekt og antar at hver node har et nøkkelattributt. 
+                De andre attributtene vi er interessert i er pekere til andre noder og kan variere fra tre til tre. 
+                I Binære trær bruker vi attributten p, venstre og høyre til å lagre pekere til forelder, venstre barn og høyre barn av hver node i et binært tre. 
+                Treet er da tomt hvis roten peker på NIL. Dersom vi ønsker et vilkårlig antall barn kan vi få hvert barn til å peke på andre barn og foreldrenoden. 
+                Slik slipper vi å allokere masse minne som ikke blir brukt før barna legges til. 
+                Ved disse attributtene kan vi også vite hvor mange barn en forelder har.
+
+              </p>
               <h3 class="content-subtitle">Binære Søketrær</h3>
+              <p class="content-paragraph">
+                Vi kan representere et binært søke tre med en lenket data struktur der hver node er et objekt, I tillegg til en nøkkel og satellittdata, 
+                har hver node attributtene venstre, høyre og p som peker til sitt venstre barn, høyre barn og forelder. 
+                Nøklene i et binært søketre er alltid lagret på en slik måte at det tilfredstiller den binære søketree egenskapen: 
+                La x være en node i et binært søketre. Hvis y er en node i det venstre deltreet av x, så vil y.nøkkel <= x.nøkkel. 
+                Hvis y er en node i det høyre deltreet til x, så vil y.nøkkel >= x.nøkkel. 
+                Det binære søketreet egenskapen gir oss mulighet til å skrive ut alle nøklene i binært søketre i en sortert orden 
+                ved en enkel rekursiv algoritme som heter Inorder tree walk. Den skriver ut nøkkelen av roten til et deltre mellom 
+                utskrivingen av verdiene i sitt venstre deltre og skrive ut de i sitt høyre deltre. 
+                Liknende, vil Preorder tree walk skrive ut roten før verdiene i ethvert deltre, og Postorder tree walk skriver ut roten etter verdiene i sine deltre.
+                
+                Når det gjelder søking vil Tree-search rekursivt sjekke høyre og venstre barn ut ifra verdien til nøkkelen, 
+                helt til den enten kommer til at noden vi leter etter er det samme som søkenoden eller at den er NIL, dvs. at vi ikke fant søkenoden. 
+
+                Iterative-Tree-Search bruker da en while loop og oppdaterer node x underveis til den enten er blitt likt det vi er ute etter eller NIL. 
+                Tree-Minimum søker gjennom alle venstre barn helt til den har kommet til bunnen og har da funnet minimum. 
+                Tree-Maksimum søker gjennom alle høyre barn til den har kommet til bunnen og har da funnet maksimum.
+                Tree-Successor returnerer etterfølgeren av en node x i et binært søketree hvis den eksisterer og NIL hvis x har den største nøkkelen i treet.
+                Tree-Predecessor er symmetrisk til Tree-Successor.
+                Tree-Insert tar inn en node z der z-nøkkel = v, z.venstre = NIL og Z.høyre = NIL. Den modifiserer T og noen av attributtene 
+                til z på en slik både for å sette inn z på en fungerende posisjon i treet.
+                Tree-Delete bruker Transplant som en subrutine som erstatter et deltre som et barn av sin forelder med et annet deltre. 
+                Vi har også tre tilfeller vi må være obs på når vi sletter. 1. Hvis z ikke har noen barn, 
+                kan vi enkelt fjerne det ved å modifisere sin forelder til å erstatte z med NIL som sitt barn. 2. Hvis z bare har et barn, 
+                kan vi modifisere z sin forelder til å erstatte z med z sitt barn. 3. Hvis z har to barn, kan vi finne z sin etterfølger 
+                y – som må være i z sitt høyre deltre – og la y ta z sin posisjon i treet. Resten av z sitt original høyre deltree blir 
+                y sitt høyre deltre og samme med venstre deltre.
+              </p>
               <h3 class="content-subtitle">Høyde på Binære Søketrær</h3>
+              <p class="content-paragraph font-bold">
+                Θ(lg n)
+              </p>
             </div>
             <!-- 6. Dynamisk programmering -->
             <div class="flex flex-col">
               <h2 class="content-title">6. Dynamisk programmering</h2>
               <h3 class="content-subtitle">Delinstansgraf</h3>
+              <p class="content-paragraph">
+                Når vi har et DP-problem ønsker vi å forstå mengden med delproblemer involvert og hvordan de avhenger av hverandre.
+              </p>
               <h3 class="content-subtitle">Designmetoden Dynamisk Programmering</h3>
-              <h3 class="content-subtitle">Memoisering</h3>
-              <h3 class="content-subtitle">Iterasjon</h3>
+              <p class="content-paragraph">
+                Dette er en designmetode som er effektiv til å løse problemer der delproblemene overlapper, i motsetning til splitt og hersk.
+                Dette brukes ofte til optimaliseringsproblemer, hvor disse problemene har flere mulige løsninger, 
+                vi kaller dette en optimal løsning og ikke den optimale løsningen, siden det kan være flere.
+                Vi følger da fire steg:
+                1. Karaktiser strukturen til en optimal løsning
+                2. Rekursivt definere verdien av en optimal løsning, 
+                3. Regn ut verdien til den optimale løsn ingen, typisk på en bottom-up måte.
+                4. Konstruer en optimal løsning fra utregnet informasjon.
+              </p>
+              <h3 class="content-subtitle">Memoisering(top down)</h3>
+              <p class="content-paragraph">
+                Vi skriver prosedyren rekusivt på en vanlig måte, samtidig som vi modifiserer den til å lagre løsningen på hvert delproblem. 
+                Prosedyren sjekker nå først om det har løst det forrige delproblemet vårt, hvis det er tilfelle henter det ut løsningen vår 
+                fra en liste/hash tabell for å spare tid, hvis ikke regner vi ut verdien på vanlig vis.
+              </p>
+              <h3 class="content-subtitle">Iterasjon(bottom up)</h3>
+              <p class="content-paragraph">
+                Denne tilnærmingen er typisk avhengig av å vite størrelsen på et delproblem, slik at å løse ethvert delproblem er bare avhengig 
+                av å løse mindre delproblemer. Vi sorterer så delproblemene og løser de minste først og jobber oss oppover i størrelse. 
+                Når vi løser et gitt delproblem har vi løst de mindre delproblemene dette delproblemet er avhengig av og lagret deres løsninger. 
+                Vi løser ethvert delproblem bare en gang og vi har allerede løst alle av sine forrige delproblemer.
+              </p>
               <h3 class="content-subtitle">Løsning fra lagrede beslutninger</h3>
+              <p class="content-paragraph">
+                Vi henter ut en løsning og sammenligner med det vi har funnet ut allerede, 
+                er det bedre bruker vi det vi har hentet ut, hvis ikke erstatter vi vår nåværende løsning.
+              </p>
               <h3 class="content-subtitle">Optimal Delstruktur</h3>
+              <p class="content-paragraph">
+                Optimale løsninger til et problem bruker de optimale løsningene til de relaterte subproblemene, som vi løser hver for seg.
+              </p>
+              <h3 class="content-subtitle">Overlappende Delinstanser</h3>
+              <p class="content-paragraph">
+                Dette er delinstanser som forekommer flere ganger vi når vi løser et problem.
+              </p>
               <h3 class="content-subtitle">Stavkutting</h3>
+              <p class="content-paragraph">
+                I Stavkutting ønsker vi å finne den mest optimale staven vi kan kutte opp for best mulig pris. 
+                Da kan vi lagre løsningen underveis for bedre kjøretid istedenfor å kalle rekursivt på metoden med samme input. 
+              </p>
               <h3 class="content-subtitle">Longest Common Subsequence</h3>
+              <p class="content-paragraph">
+                I LCS ønsker vi å finne lengste felles delsekvens av to ord. 
+                Da setter vi opp et rutenett der det ene ordet representer raden og det andre kolonnen. 
+                Deretter kan vi legge til 1 verdi der vi har felles bokstaver, 
+                og erstatte tallene i det fylte rutenettet med piler som enten peker opp, til venstre eller diagonalt. 
+                Løsningen vår blir de bokstavene som peker diagonalt satt sammen. Da har vi funnet lengste delsekvens.
+              </p>
               <h3 class="content-subtitle">Løsningen på det Binære Ryggsekkproblemet</h3>
+              <p class="content-paragraph">
+                Vi løser dette ved å bruke memoisering eller skrive den om til en iterativ bottom-up-løsning.
+              </p>
             </div>
             <!-- 7. Grådige algoritmer -->
             <div class="flex flex-col">
               <h2 class="content-title">7. Grådige algoritmer</h2>
               <h3 class="content-subtitle">Desingmetoden Grådighet</h3>
+              <p class="content-paragraph">
+                Løs det mest lovende delproblemet rekursivt og bygg løsningen på denne delløsningen.
+              </p>
               <h3 class="content-subtitle">Grådighetsegenskapen</h3>
+              <p class="content-paragraph">
+                Dette er garantien for at det lokale optimale valget ikke ødelegger for resten av valgene vi skal gjøre.
+              </p>
               <h3 class="content-subtitle">Aktivitets utvelgelse</h3>
+              <p class="content-paragraph">
+                I Aktivitets-utvelgelse ønsker vi å finne de aktivitetene som varer lengst og ikke overlapper med hverandre. 
+                Her lønner det deg å velge det intervallet som slutter først og vi trenger ikke se på alle delproblemene. 
+              </p>
               <h3 class="content-subtitle">Kontinuerlige Ryggsekkproblemet</h3>
+              <p class="content-paragraph">
+                Dette er en algoritme som finner en optimal mengde med elementer i forhold til vekta av ryggsekken, 
+                vi kan da i motsetning til den binære versjonen dele opp elementene i mindre biter for å få plass til mer forutsatt at sekken fylles optimalt.
+              </p>
               <h3 class="content-subtitle">Huffman og Huffman Koder</h3>
+              <p class="content-paragraph">
+                Huffman er en komprimeringsalgoritme hvor vi setter sammen noder etter deres frekvens, 
+                vi ønsker da å lage binære koder for tegn og minimere forventet kodelengde. 
+                Vi kan da etablere at å gå til venstre er 0 og til høyre er 1 som gjør at vi får koder for hver node.
+
+              </p>
             </div>
             <!-- 8. Traversering av grafer -->
             <div class="flex flex-col">
               <h2 class="content-title">8. Traversering av grafer</h2>
               <h3 class="content-subtitle">Implementering av Grafer</h3>
+              <p class="content-paragraph">
+                Vi kan da bruke en naboliste eller nabomatrise for å representere en graf. 
+                Naboliste tar da mindre plass(V*E), ulempen er at vi må hente ut data i lineær tid. 
+                Nabomatrise tar på den andre siden mer plass(V^2), heldigvis kan vi aksessere data i konstant tid O(1). 
+
+              </p>
               <h3 class="content-subtitle">BFS og Korteste Veier</h3>
+              <p class="content-paragraph">
+                BFS starter med å velge en node for å så traversere til de 2 barnenodene sine og fortsette derifra til grafen er traversert. 
+                Bruker en kø som datastruktur. Den har kjøretid Θ(V) i beste tilfelle, og Θ(V+E) i verste tilfelle.
+              </p>
               <h3 class="content-subtitle">DFS, Paranteseteoremet og Hvit Sti Teoremet</h3>
+              <p class="content-paragraph">
+                DFS søker gjennom grafen til den møter bunnoden og går opp derifra og fortsetter til neste bunn, bruker da en stakk som datastruktur. Kjøretiden er da Θ(V+E) i verste tilfelle og i beste tilfelle. 
+                Paranteseteoremet handler om å representere oppdagelsen av en node u med en venste parantes «(u» og representere slutten til noden med en høyre parantes «u)». Når vi har en dyybde-først søk av en graf for enhver node u og v, skal en av tre betinglser holde:
+                - intervallene [u.d,u.f] og [u.d,v.f] er helt disjointe, og u og v skal ikke være etterfølgere av hverandre i dybde-først skogen, eller
+                - intervallene [u.d,u.f] passer helt inn i intervallet [v.d,v.f], og u er etterfølger av v i dybde-først treet, eller
+                - intervallene [v.d,v.f] passer helt inn i intervallet [u.d,u.f], og v er etterfølger av u i dybde-først treet.
+                Hvit-sti-teoremet handler om at i en dybde-først skog av en graf G, er node v en etterfølger av u hvis og bare hvis på den tiden u.d der søket oppdager u, så er det en stu fra u til v som bare inneholder hvite noder. 
+
+              </p>
               <h3 class="content-subtitle">DFS kantklassifisering</h3>
+              <p class="content-paragraph">
+                Dette gjøres ved å se på hvilken farge en node har.
+                1. Hvit indikerer en tre-kant
+                2. Grå indikerer en bakover-kant
+                3. Svart indikerer en forover eller kryss-kant.
+
+              </p>
               <h3 class="content-subtitle">Topologisk Sortering</h3>
+              <p class="content-paragraph">
+                Her ønsker vi å sortere en rettet asyklisk graf(DAG) ved hjelp av å modifisere DFS til å bruke sluttider og sette inn hver node i en lenket liste. 
+                Dette gir en lineær ordning av alle nodene slik at grafen G inneholder en kant (u,v), der u kommer før v i den ordningen. 
+                Eksempler på topologisk sortering kan være pakkesystemer eller å ta på seg et antrekk hvor et må være til stede før det andre. 
+                Det finnes imidlertidig flere topologiske sorteringer av en graf.
+              </p>
               <h3 class="content-subtitle">DFS implementasjon med Stack</h3>
+              <p class="content-paragraph">
+                Med tanke på at vi går nedover til bunn gjør det ganske naturlig for oss å bruke en stakk hvor hver node legges på stakken ettersom den besøkes og 
+                fjernes når vi er kommet til bunn og må traversere oppover
+              </p>
               <h3 class="content-subtitle">Traverseringstrær</h3>
+              <p class="content-paragraph">
+                Et Bredde-først tre blir bygget når BFS kjører.Dette kan da være forgjenger delgraf som har alle nodene som kan 
+                bli nådd fra start og for alle nodene i forgjengernodene vil delgrafen inneholde en unik enkel sti fra s til v som er 
+                også en korteste vei fra s til v i G. Det er ulikt i DFS hvor vi får en DFS skog med flere DFS trær.
+              </p>
               <h3 class="content-subtitle">Traversering med vilkårlig Prioritetskø</h3>
+              <p class="content-paragraph">
+                Vi har da en kø med de ulike nodene sortert etter verdi og kan da besøke de en etter en.
+              </p>
             </div>
             <!-- 9. Minimale spenntrær -->
             <div class="flex flex-col">
               <h2 class="content-title">9. Minimale spenntrær</h2>
               <h3 class="content-subtitle">Skog Implementasjon av Disjunkte Mengder</h3>
+              <p class="content-paragraph">
+                Connected-Components: Denne prosedyren regner ut de tilkoblede komponentene av en graf.
+                Same-Component: Denne prosedyren sjekker om to noder er i den samme tilkoblede komponenten.
+                Make-Set(x): lager en ny mengde der bare medlemmene (og da representanten) er x. Siden mengdene er disjunkte, krever vi at x ikke er i en mengde allerede.
+                Union: samler de dynamiske mengdene som inneholder x og y i en ny mengde som er unionen av disse mengdene. Vi antar at disse mengdene er disjunkte før operasjonen. Her vil vi i praksis ofte trekke ut elementene av den ene mengden og legge den inn i den andre når vi ønsker å finne en ny representant. Den har O(lg V) kjøretid.
+                Link(x,y): Vi tar inn to pekere x og y og sjekker om rangen til x er større enn y, om det er tilfelle setter vi y sin rang til x pekeren, og omvendt hvis y er større, i det tilfelle sjekker vi også om de har lik rang, er det tilfelle kan vi legge til 1 til rangen til y.
+                Find-Set(x): returnerer en peker til representanten av det (unike) mengden som inneholder x.-
+                Vi holder styr på de ulike nodene ved hjelp av en rank som oppdateres når vi setter sammen nodene til et tre. Den har O(lg V) kjøretid.
+              </p>
               <h3 class="content-subtitle">Spenntrær og minimale Spenntrær</h3>
+              <p class="content-paragraph">
+                Spenntrær er trær som inneholder alle nodene i en grafuten sykler, og minimale spenntrær er trær som er satt sammen med minst mulig kantvekt.
+              </p>
               <h3 class="content-subtitle">Generisk MST</h3>
+              <p class="content-paragraph">
+                Dette er en algoritme som oppretter en mengde A og looper så lenge A ikke blir et spenntre, 
+                deretter finner vi trygge kanter og legger de til A, når vi er ut av loopen returnerer 
+                vi A og har da funnet et minimalt spenntre. Da opprettholder vi loop invarianten vår når vi legger til trygge kanter.
+              </p>
               <h3 class="content-subtitle">Lette kanter er trygge kanter</h3>
+              <p class="content-paragraph">
+                Lette kanter er minimum av de som krysser et snitt av grafen G og er da trygge kanter å legge til spenntreet.
+              </p>
               <h3 class="content-subtitle">MST Kruskal</h3>
+              <p class="content-paragraph">
+                Kruskal går gjennom grafen og bygger spenntreet ut av de minste kantene som finnes og kobler de sammen ettersom de blir oppdaget. 
+                Så lenge vi ikke får en sykel så har vi funnet det minimale spenntreet når de nødvendige nodene er satt sammen til et tre. 
+                O(E lg V) er den totale kjøretiden.
+
+              </p>
               <h3 class="content-subtitle">MST Prim</h3>
+              <p class="content-paragraph">
+                rim har en annen innfallsvinkel og velger grådig gjennom grafen. Starter da ved en bestemt node og velger den kanten 
+                som er minst derifra og fortsetter videre. Bruker da en min-prioritetskø for å traversere. O(E lg V) er den totale kjøretiden. 
+                Hvis vi bruker en Fibonacci-haug kan vi forbedre kjøretiden ti l O(E + V lg V).
+              </p>
             </div>
             <!-- 10. Korteste vei fra én til alle -->
             <div class="flex flex-col">
               <h2 class="content-title">10. Korteste vei fra én til alle</h2>
+  
               <h3 class="content-subtitle">Varianter av korteste Vei Problemet</h3>
+              <p class="content-paragraph">
+                Single-Source: Gitt en graf G = (V,E), vi har lyst til å finde en korteste vei fra en gitt startnode s til alle noder i grafen.
+                Single-Destination: Finn en korteste vei til en gitt endenode t fra alle noder i grafen. Ved å reverser retningen av hver kant i grafen, vi kan redusere dette problemet til en single-source problem.
+                Single-Pair: Finn den korteste veien fra u til v for de gitte nodene u og v. Hvis vi løser single-source problemet med startnode i, vi løser dette problemet også. Samtidig vil alle algoritmene som løser dette problemet ha samme worst-case asymptotisk kjøretid som de beste single-source algoritmene.
+                All-Pairs: Finn den korteste veien fra u til v for hvert par av noder u og v. Selv om vi kan løse dette problemet ved å kjøre en single-source algoritme fra hver node, vi kan læse den fortere ved andre algoritmer.
+              </p>
               <h3 class="content-subtitle">Strukturen til Korteste Vei problemet</h3>
+              <p class="content-paragraph">
+                En korteste vei mellom to noder inneholder korteste veier mellom dem.
+              </p>
               <h3 class="content-subtitle">Negative Sykler og korteste enkle vei</h3>
+              <p class="content-paragraph">
+                Dersom vi har en negativ sykel kan vi ikke finne en korteste enkle vei.
+              </p>
               <h3 class="content-subtitle">Korteste og Lengste enkle vei</h3>
+              <p class="content-paragraph">
+                Vi kan da finne korteste og lengste enkle vei ved å snu om på kantvektene og kjøre en traverseringsalgoritme på dem.
+              </p>
               <h3 class="content-subtitle">Korteste vei tre</h3>
+              <p class="content-paragraph">
+                Vi kan representerer den som en rettet delgraf av G hvor nodene i delgrafen kan nås fra s i G, 
+                delgrafen blir et rotet tre med rot s, og for alle nodene i delgrafen, 
+                den unike enkle stien fra s til v i delgrafen er en korteste vei fra s til v i G.
+              </p>
               <h3 class="content-subtitle">Kant slakking og Relax</h3>
+              <p class="content-paragraph">
+                Kant-slakking handler om å endre korteste vei estimatet vi har til en node fra en annen.
+                I Relax sjekker vi om korteste vei estimatet til en node er større enn estimatet til den andre sammen med vekten mellom de. 
+                Da oppdaterer vi det største estimatet ved å sette den til det laveste estimat sammen med vekten mellom de, 
+                og oppdatere forgjenger til den noden med lavest estimat.
+
+              </p>
               <h3 class="content-subtitle">Egenskaper ved korteste veier og slakking</h3>
+              <p class="content-paragraph">
+                Triangle inequality: For hver kant (u,v) I kantmengden vi har at korteste-vei vekt mellom s og v er mindre eller lik korteste-vei vekt mellom s og u + vekten til kanten av u og v.
+                Upper-bound property: Vi har alltid at v.d er større eller lik korteste-vei vekt mellom s og v for alle noder i V, og når v.d får verdien av korteste-vei vekta mellom s og v, vil den aldri endres.
+                No-path property: Hvis det ikke er en vei fra s til v, så korteste-vei estimatet og korteste vei vekt uendelig.
+                Convergence property: Hvis veien mellom s og u som impliserer v er en korteste vei i G for noen noder u og v, og hvis korteste vei estimatet er lik korteste vei vekten ved enhver tid før slakkingen av kanten (u,v), så er korteste vei estimatet likt korteste vei vekten for alle ganger etterpå.
+                Path-relaxation property: Hvis p er en korteste vei fra s til v og vi slakker kantene til p i rekkefølge, så vil v få riktig avstandsestimat.
+                Predecessor-subgraph property: Med en gang korteste vei estimatet er lik vekten for alle noder i V, vil forgjenger delgrafen være et korteste-vei tre rotet ved s.
+              </p>
               <h3 class="content-subtitle">Bellman Ford</h3>
+              <p class="content-paragraph">
+                Her ønsker vi å finne korteste vei i en graf ved bruk av intialize-Single-Source og Relax, og samtidig sjekke om vi har en negativ sykel ved å bruke trekantulikheten. 
+                Hvis dette er tilfelle kan vi ikke finne en løsning. Algoritmen tillater også negative kantvekter og har kjøretid O(VE).
+              </p>
               <h3 class="content-subtitle">Dag shortest paths</h3>
+              <p class="content-paragraph">
+                Her finner vi korteste vei ved å topologisk sortere nodene til en graf, bruke initialize-Single-Source på grafen 
+                og slakke kantene med Relax i topologisk sortert orden. Vi får da kjøretid Θ(V + E).
+
+              </p>
               <h3 class="content-subtitle">Dag shortest paths og Dynamisk programmering</h3>
+              <p class="content-paragraph">
+                Vi bruker en «bottom-up» løsning når vi skal slakke kantene i topologisk sortert rekkefølge. 
+                Delproblemene er avstander fra s til inn-naboer, så vi velger den som gir best resultat.
+              </p>
               <h3 class="content-subtitle">Dijkstra</h3>
+              <p class="content-paragraph">
+                Her finner vi korteste vei ved å lokale optimale valg underveis og bruke Relax på naboene. 
+                Vi bruker da en min-prioritetskø for å hente ut naboene. 
+                Siden vi alltid velger den letteste eller nærmeste noden for å legge til køen vår, er dette en grådig strategi. 
+                Vi tillater ikke negative kantvekter og kjøretiden er O(V lg V + E lg V).
+              </p>
             </div>
             <!-- 11. Korteste vei fra alle til alle -->
             <div class="flex flex-col">
               <h2 class="content-title">11. Korteste vei fra alle til alle</h2>
+
               <h3 class="content-subtitle">Forgjengerstrukturen</h3>
+              <p class="content-paragraph">
+                For å kunne løse korteste vei alle-til-alle trenger vi å holde styr på forgjengeren for å vite om det går en vei gjennom to noder, 
+                som avgjøres om den er NIL eller ikke.
+
+              </p>
               <h3 class="content-subtitle">Floyd Warshall</h3>
+              <p class="content-paragraph">
+                Her bruker vi både en distanse og – forgjengermatrise til å finne en korteste vei. 
+                Da har vi en formel som sjekker om vi har en bedre vei mellom nodene, og er dette tilfelle oppdaterer vi nodedistansen og forgjengeren. 
+                Kjøretiden er da Θ(V^3).
+
+              </p>
               <h3 class="content-subtitle">Transitive Closure</h3>
+              <p class="content-paragraph">
+                Her har vi en matrise med binære noder hvor vi ønsker å finne ut om det finnes en korteste vei. 
+                Da kan vi gå gjennom matrisen og bruke en formell for å finne ut av om vi kan oppdatere en vei. Kjøretiden er da Θ(n^3)
+              </p>
               <h3 class="content-subtitle">Johnson</h3>
+              <p class="content-paragraph">
+                Her bruker vi både Bellman-Ford og Dijkstra til å finne en korteste vei fra alle til alle. 
+                Bruker da en teknikk som heter re-vekting underveis. Denne tillater negative kantvekter. Kjøretiden er da O(V^2lgV + VE).
+              </p>
             </div>
             <!-- 12. Maksimal flyt -->
             <div class="flex flex-col">
               <h2 class="content-title">12. Maksimal flyt</h2>
               <h3 class="content-subtitle">Flytnett, flyt og maks-flyt-problemet</h3>
+              <p class="content-paragraph">
+                Et flytnett er en rettet graf med noder og kanter som vi har gitt en ikke-negativ kapasitet. 
+                Vi har da to distinkte noder som er kilde og sluk. Flyt er en funksjon som respekterer egenskapen kapasitetsbegrensning og flytbevaring. 
+                Maks-flyt-problemet handler om å optimaliserer flyten som går gjennom flytnettet helt til det er maksimum.
+
+              </p>
               <h3 class="content-subtitle">antiparallelle kanter og flere kilder og sluk</h3>
+              <p class="content-paragraph">
+                Dersom vi har en antiparallell kant kan vi splitte noden og legge til en ny for å opprettholde flyten. 
+                Når vi har flere kilder og sluk kan vi bruke superkilde og supersluk og sette kapasiteten til hver kant til de til uendelig.
+
+              </p>
               <h3 class="content-subtitle">Restnettet til et flytnett</h3>
+              <p class="content-paragraph">
+                Dette er en graf Gf med kanter der kapasiteten representerer hvordan vi kan endre flyten på kantene i G.
+
+              </p>
               <h3 class="content-subtitle">Oppheve flyt</h3>
+              <p class="content-paragraph">
+                Dette kan vi gjøre ved å få flyt på de reverserende kantene i restnettet.  
+              </p>
               <h3 class="content-subtitle">Forøkende sti (Augmenthing paths)</h3>
+              <p class="content-paragraph">
+                Dette er en enkel sti i restnettet vårt hvor vi kan øke flyten.
+              </p>
               <h3 class="content-subtitle">Snitt, snittkapasitet, og minimalt snitt</h3>
-              <h3 class="content-subtitle">maks-flyt/min-snitt teoremet</h3>
+              <p class="content-paragraph">
+                Snitt er en oppdeling av flytnettet vårt hvor den ene siden inneholder kilden og den andre siden inneholder sluket.
+                Snitt-kapasitet er det som kan gå fra kilde til sluk.
+                Minimalt snitt er et snitt der kapasiteten er minimum over alle snittene i nettverket.
+
+              </p>
+              <h3 class="content-subtitle">Maks-flyt/min-snitt teoremet</h3>
+              <p class="content-paragraph">
+                Hvis f er en flyt i et flytnett G = (V,E) med en kilde s og et sluk t, må følgende betingelser være ekvivalente
+                1. f er maksimum flyt i G.
+                2. Restnettet Gf inneholder ingen forøkende sti.
+                3. |f| = c(S,T) for et snitt (S,T) av G.
+                Den kategoriserer verdien av maksimum flyt i form av snitt av flytnettet.
+
+              </p>
               <h3 class="content-subtitle">Ford-fulkerson-method og ford-fulkerson</h3>
-              <h3 class="content-subtitle">Edmon Karp</h3>
+              <p class="content-paragraph">
+                Ford-Fulkerson-Method er en metode som vi bruker til å finne forøkende stier p og bruke p til å modifisere flyten. 
+                Ford-Fulkerson er da en implementasjon av metoden hvor vi finner maksimum flyt i et flytnett G=(V,E) ved å oppdatere flytattributtet for hver kant. 
+                Kjøretiden til Ford-Fulkerson algoritmene er O(E |f*|) 
+              </p>
+              <h3 class="content-subtitle">Edmond Karp</h3>
+              <p class="content-paragraph">
+                Ford-Fulkerson som bruker BFS til å traversere og gjør at vi får en bedre grense.
+              </p>
               <h3 class="content-subtitle">Maks flyt og bipartitt matching</h3>
+              <p class="content-paragraph">
+                Vi ilegger hver kant en kapasitet på 1 i et flytnett med kilde og sluk på hver side av nodene vi ønsker å matche, 
+                deretter kjører Ford-Fulkerson som vil finne maks-flyt og en maksimum bipartitt matching som resultat. 
+                Hvis den ikke hadde gjort dette hadde vi hatt forøkende stier som motsier det vi gjør i Ford-Fulkerson.
+              </p>
               <h3 class="content-subtitle">Heltallsteoremet (integrality theorem)</h3>
+              <p class="content-paragraph">
+                Hvis kapasitet funksjonen c bare tar integral verdier, vil maksimum flyt f produsert av Ford-Fulkerson metoden har en egenskap der |f| er et heltall. 
+                Dessuten, for alle noder u og v, verdien av f(u,v) er et heltall.
+              </p>
             </div>
             <!-- 5. R13. NP-kompletthet -->
             <div class="flex flex-col">
               <h2 class="content-title">13. NP-kompletthet</h2>
-              <h3 class="content-subtitle">optimerings - og beslutnings-problemer</h3>
-              <h3 class="content-subtitle">koding av en instans</h3>
+              <h3 class="content-subtitle">Optimerings - og beslutnings-problemer</h3>
+              <p class="content-paragraph">
+                Dette er en sammenheng i forhold til hvor vanskelig eller lett det er å løse en algoritme. 
+                Beslutningsproblemer er på en måte lettere eller minst like vanskelig som en optimeringsproblem. 
+                Som vil si at hvis et beslutningsproblem er vanskelig så er også optimaliseringsproblemet vanskelig.
+              </p>
+              <h3 class="content-subtitle">Koding av en instans</h3>
+              <p class="content-paragraph">
+                Dette er en mapping av innholdet i en instans til en mengde av binære strenger.
+              </p>
               <h3 class="content-subtitle">Løsningen på det binære Ryggsekkproblemet</h3>
+              <p class="content-paragraph">
+                Når vi dobler inputstørrelsen vil kompleksiteten dobles, som gjør at den er eksponentiell. O(nW) = O(n*2^(bits i W))
+              </p>
               <h3 class="content-subtitle">Forskjellen på konkrete og abstrakte problemer</h3>
+              <p class="content-paragraph">
+                Abstrakte problemer er en binær relasjon på en mengde av probleminstanser og en mengde av problemløsninger. 
+                Mens et konkret problem er et problem hvor både input og output er binære strenger.
+              </p>
               <h3 class="content-subtitle">Beslutningsproblemer som formelle språk</h3>
+              <p class="content-paragraph">
+                Dersom vi representer et beslutningsproblem som et språk kan vi sjekke permutasjonene av det språket for å finne en løsning.
+              </p>
               <h3 class="content-subtitle">Klassene P, NP og co-NP</h3>
+              <p class="content-paragraph">
+                NP er den klassen av problemer som kan bli verifisert i polynomisk tid, ja-svar. 
+                P er den klassen av problemer som kan løses i polynomisk tid. 
+                Vi definerer co-NP som en mengde av språk L der komplettet av L er i NP, dette er da nei-svarene. 
+
+              </p>
               <h3 class="content-subtitle">Redusibilitetsrelasjonen</h3>
+              <p class="content-paragraph">
+                Hvis vi reduserer fra et problem A til et annet problem B kan vi bevise at B er minst like vanskelig å løse som A.
+              </p>
               <h3 class="content-subtitle">NP-hardhet og NP-kompletthet</h3>
+              <p class="content-paragraph">
+                NP-kompletthet betegner en klasse med problemer som har den egenskapen av at hvis vi løser hvilket som helst problem i polynomisk tid 
+                kan vi løse alle i polynomisk tid og bevise at P = NP. 
+                NP-hardt er problemer som er minst like vanskelig som de vanskeligste problemene i NP(NPC).
+              </p>
               <h3 class="content-subtitle">Hypotesen om forholdet mellom P, NP og NPC</h3>
+              <p class="content-paragraph">
+                NP inneholder både P og NPC, og snittet mellom de mengdene er tomt.
+              </p>
               <h3 class="content-subtitle">NP-kompletthet bevist ved en reduksjon</h3>
+              <p class="content-paragraph">
+                Når vi reduserer fra et NP-komplett problem til et annet problem, viser vi at det problemet vi har redusert til er et NP-komplett problem, 
+                siden det vi reduserer til å må være minst like komplekst.
+
+              </p>
               <h3 class="content-subtitle">NP-komplette problemene i pensum</h3>
+              <p class="content-paragraph">
+                CIRCUIT-SAT:
+                - Instans: En krets med logiske porter og en utverdi
+                - Spørsmål: Kan utverdien bli 1?
+                SAT:
+                - Instans: En logisk formel
+                - Spørsmål: Kan formelen være sann?
+                3-CNF-SAT:
+                - Instans: En logisk formel på 3-CNF-Form
+                - Spørsmål: Kan formelen være sann?
+                QLIQUE:
+                - Instans: En urettet graf G og et heltall k.
+                - Spørsmål: Har G en komplett delgraf med k noder?
+                VERTEX-COVER:
+                - Instans: En urettet graf G og et heltall k
+                - Spørsmål: Har G et nodedekke med k noder? Dvs., k noder som til sammen ligger inntil alle kantene.
+                HAM-CYCLE:
+                - Instans: En urettet graf G
+                - Spørsmål: Finnes det en sykel som inneholder alle nodene?
+                TSP:
+                - Instans: En komplett graf med heltallsvekter og et heltall k
+                - Spørsmål: Finnes det en rundtur med kostnad <= k?
+                SUBSET-SUM:
+                - Instans: Mengde positive heltall S og positivt heltall t.
+                - Spørsmål: Finnes en delmengde S’ i S så summen av s i S’ blir t?
+              </p>
               <h3 class="content-subtitle">Det binære Ryggsekkproblemet er NP-hardt</h3>
+              <p class="content-paragraph">
+                Det er like vanskelig som de andre NP-problemene.
+              </p>
               <h3 class="content-subtitle">Lengste enkle vei problemet er NP-hardt</h3>
+              <p class="content-paragraph">
+                Det er like vanskelig som de andre NP-problemene.
+              </p>
               <h3 class="content-subtitle">Konstruere enkle NP-kompletthetsbevis</h3>
+              <p class="content-paragraph">
+                
+              </p>
             </div>
           </div>
         </section>
