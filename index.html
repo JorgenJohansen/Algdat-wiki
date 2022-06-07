@@ -11,327 +11,331 @@
     <title>Algdat Wiki</title>
   </head>
   <body>
-      <header class="bg-gray-900">
+      <header class="bg-gray-800">
         <h1 class="font-sans font-bold text-white text-5xl text-center p-4 uppercase">Algdat Wiki</h1>
       </header>
-      <main>
-        <section id="sidebar" class="bg-gray-400">
+      <main class="grid grid-cols-6">
+
+        <section id="sidebar" class="bg-gray-400 col-span-2">
           <div class="flex flex-col">
             <!-- Problemer og algoritmer -->
             <div class="flex flex-col">
-              <h2 >1. Problemer og algoritmer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Pseudokode-konvensjoner</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Random access machine modellen</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Problem, instans og problemstørrelse</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Definere asymptotisk notasjon</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Best case, Worst case og Average case</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Løkkeinvarianter og Induksjon</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Rekursiv Dekomponering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Insertion sort</a>
+              <h2 class="sidebar-title">1. Problemer og algoritmer</h2>
+              <a href="#" class="sidebar-links">Pseudokode-konvensjoner</a>
+              <a href="#" class="sidebar-links">Random access machine modellen</a>
+              <a href="#" class="sidebar-links">Problem, instans og problemstørrelse</a>
+              <a href="#" class="sidebar-links">Definere asymptotisk notasjon</a>
+              <a href="#" class="sidebar-links">Best case, Worst case og Average case</a>
+              <a href="#" class="sidebar-links">Løkkeinvarianter og Induksjon</a>
+              <a href="#" class="sidebar-links">Rekursiv Dekomponering</a>
+              <a href="#" class="sidebar-links">Insertion sort</a>
             </div>
             <!-- Datastrukturer -->
             <div class="flex flex-col">
-              <h2>2. Datastrukturer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Stakker og Køer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Lenkede Lister</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Pekeere og Objekter</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Direkte Adressering og Hashtabeller</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Konfliktløsning med Kjeding</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Grunnleggende Hashfunksjoner</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Amortisert Analyse</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Dynamiske Tabeller</a>
+              <h2 class="sidebar-title">2. Datastrukturer</h2>
+              <a href="#" class="sidebar-links">Stakker og Køer</a>
+              <a href="#" class="sidebar-links">Lenkede Lister</a>
+              <a href="#" class="sidebar-links">Pekeere og Objekter</a>
+              <a href="#" class="sidebar-links">Direkte Adressering og Hashtabeller</a>
+              <a href="#" class="sidebar-links">Konfliktløsning med Kjeding</a>
+              <a href="#" class="sidebar-links">Grunnleggende Hashfunksjoner</a>
+              <a href="#" class="sidebar-links">Amortisert Analyse</a>
+              <a href="#" class="sidebar-links">Dynamiske Tabeller</a>
             </div>
             <!-- Splitt og Hersk -->
             <div class="flex flex-col">
-              <h2 >3. Splitt og Hersk</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Designmetoden Divide and Conquer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Maximum Subarray-problemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Bisect og Bisect0</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Merge Sort</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Quicksort og Randomized-Quicksort</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">substitusjon, Rekurrenstrær og masterteoremet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Iterasjonsmetoden</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Variabelskifte</a>
+              <h2 class="sidebar-title">3. Splitt og Hersk</h2>
+              <a href="#" class="sidebar-links">Designmetoden Divide and Conquer</a>
+              <a href="#" class="sidebar-links">Maximum Subarray-problemet</a>
+              <a href="#" class="sidebar-links">Bisect og Bisect0</a>
+              <a href="#" class="sidebar-links">Merge Sort</a>
+              <a href="#" class="sidebar-links">Quicksort og Randomized-Quicksort</a>
+              <a href="#" class="sidebar-links">substitusjon, Rekurrenstrær og masterteoremet</a>
+              <a href="#" class="sidebar-links">Iterasjonsmetoden</a>
+              <a href="#" class="sidebar-links">Variabelskifte</a>
             </div>
             <!-- 4. Rangering i lineær tid -->
             <div class="flex flex-col">
-              <h2>4. Rangering i lineær tid</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Grensen for sammenligningsbasert sortering i worst case</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Stabil Sortering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Counting Sort og Stabil Sortering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Radix Sort og Stabil Subrutine</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Bucket Sort</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Randomized-Select</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Select</a>
+              <h2 class="sidebar-title">4. Rangering i lineær tid</h2>
+              <a href="#" class="sidebar-links">Grensen for sammenligningsbasert sortering i worst case</a>
+              <a href="#" class="sidebar-links">Stabil Sortering</a>
+              <a href="#" class="sidebar-links">Counting Sort og Stabil Sortering</a>
+              <a href="#" class="sidebar-links">Radix Sort og Stabil Subrutine</a>
+              <a href="#" class="sidebar-links">Bucket Sort</a>
+              <a href="#" class="sidebar-links">Randomized-Select</a>
+              <a href="#" class="sidebar-links">Select</a>
             </div>
             <!-- 5. Rotfaste Trestrukturer -->
             <div class="flex flex-col">
-              <h2>5. Rotfaste trestrukturer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Heaps og Prioritetskøer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Heapsort</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Implementering av rotfaste trør</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Binære Søketrær</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Høyde på Binære Søketrær</a>
+              <h2 class="sidebar-title">5. Rotfaste trestrukturer</h2>
+              <a href="#" class="sidebar-links">Heaps og Prioritetskøer</a>
+              <a href="#" class="sidebar-links">Heapsort</a>
+              <a href="#" class="sidebar-links">Implementering av rotfaste trør</a>
+              <a href="#" class="sidebar-links">Binære Søketrær</a>
+              <a href="#" class="sidebar-links">Høyde på Binære Søketrær</a>
             </div>
             <!-- 6. Dynamisk programmering -->
             <div class="flex flex-col">
-              <h2>6. Dynamisk programmering</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Delinstansgraf</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Designmetoden Dynamisk Programmering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Memoisering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Iterasjon</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Løsning fra lagrede beslutninger</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Optimal Delstruktur</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Stavkutting</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Longest Common Subsequence</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Løsningen på det Binære Ryggsekkproblemet</a>
+              <h2 class="sidebar-title">6. Dynamisk programmering</h2>
+              <a href="#" class="sidebar-links">Delinstansgraf</a>
+              <a href="#" class="sidebar-links">Designmetoden Dynamisk Programmering</a>
+              <a href="#" class="sidebar-links">Memoisering</a>
+              <a href="#" class="sidebar-links">Iterasjon</a>
+              <a href="#" class="sidebar-links">Løsning fra lagrede beslutninger</a>
+              <a href="#" class="sidebar-links">Optimal Delstruktur</a>
+              <a href="#" class="sidebar-links">Stavkutting</a>
+              <a href="#" class="sidebar-links">Longest Common Subsequence</a>
+              <a href="#" class="sidebar-links">Løsningen på det Binære Ryggsekkproblemet</a>
             </div>
             <!-- 7. Grådige algoritmer -->
             <div class="flex flex-col">
-              <h2>7. Grådige algoritmer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Desingmetoden Grådighet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Grådighetsegenskapen</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Aktivitets utvelgelse</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Kontinuerlige Ryggsekkproblemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Huffman og Huffman Koder</a>
+              <h2 class="sidebar-title">7. Grådige algoritmer</h2>
+              <a href="#" class="sidebar-links">Desingmetoden Grådighet</a>
+              <a href="#" class="sidebar-links">Grådighetsegenskapen</a>
+              <a href="#" class="sidebar-links">Aktivitets utvelgelse</a>
+              <a href="#" class="sidebar-links">Kontinuerlige Ryggsekkproblemet</a>
+              <a href="#" class="sidebar-links">Huffman og Huffman Koder</a>
             </div>
             <!-- 8. Traversering av grafer -->
             <div class="flex flex-col">
-              <h2>8. Traversering av grafer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Implementering av Grafer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">BFS og Korteste Veier</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">DFS, Paranteseteoremet og Hvit Sti Teoremet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">DFS kantklassifisering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Topologisk Sortering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">DFS implementasjon med Stack</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Traverseringstrær</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Traversering med vilkårlig Prioritetskø</a>
+              <h2 class="sidebar-title">8. Traversering av grafer</h2>
+              <a href="#" class="sidebar-links">Implementering av Grafer</a>
+              <a href="#" class="sidebar-links">BFS og Korteste Veier</a>
+              <a href="#" class="sidebar-links">DFS, Paranteseteoremet og Hvit Sti Teoremet</a>
+              <a href="#" class="sidebar-links">DFS kantklassifisering</a>
+              <a href="#" class="sidebar-links">Topologisk Sortering</a>
+              <a href="#" class="sidebar-links">DFS implementasjon med Stack</a>
+              <a href="#" class="sidebar-links">Traverseringstrær</a>
+              <a href="#" class="sidebar-links">Traversering med vilkårlig Prioritetskø</a>
             </div>
             <!-- 9. Minimale spenntrær -->
             <div class="flex flex-col">
-              <h2>9. Minimale spenntrær</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Skog Implementasjon av Disjunkte Mengder</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Spenntrær og minimale Spenntrær</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Generisk MST</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Lette kanter er trygge kanter</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">MST Kruskal</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">MST Prim</a>
+              <h2 class="sidebar-title">9. Minimale spenntrær</h2>
+              <a href="#" class="sidebar-links">Skog Implementasjon av Disjunkte Mengder</a>
+              <a href="#" class="sidebar-links">Spenntrær og minimale Spenntrær</a>
+              <a href="#" class="sidebar-links">Generisk MST</a>
+              <a href="#" class="sidebar-links">Lette kanter er trygge kanter</a>
+              <a href="#" class="sidebar-links">MST Kruskal</a>
+              <a href="#" class="sidebar-links">MST Prim</a>
             </div>
             <!-- 10. Korteste vei fra én til alle -->
             <div class="flex flex-col">
-              <h2>10. Korteste vei fra én til alle</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Varianter av korteste Vei Problemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Strukturen til Korteste Vei problemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Negative Sykler og korteste enkle vei</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Korteste og Lengste enkle vei</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Korteste vei tre</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Kant slakking og Relax</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Egenskaper ved korteste veier og slakking</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Bellman Ford</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Dag shortest paths</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Dag shortest paths og Dynamisk programmering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Dijkstra</a>
+              <h2 class="sidebar-title">10. Korteste vei fra én til alle</h2>
+              <a href="#" class="sidebar-links">Varianter av korteste Vei Problemet</a>
+              <a href="#" class="sidebar-links">Strukturen til Korteste Vei problemet</a>
+              <a href="#" class="sidebar-links">Negative Sykler og korteste enkle vei</a>
+              <a href="#" class="sidebar-links">Korteste og Lengste enkle vei</a>
+              <a href="#" class="sidebar-links">Korteste vei tre</a>
+              <a href="#" class="sidebar-links">Kant slakking og Relax</a>
+              <a href="#" class="sidebar-links">Egenskaper ved korteste veier og slakking</a>
+              <a href="#" class="sidebar-links">Bellman Ford</a>
+              <a href="#" class="sidebar-links">Dag shortest paths</a>
+              <a href="#" class="sidebar-links">Dag shortest paths og Dynamisk programmering</a>
+              <a href="#" class="sidebar-links">Dijkstra</a>
             </div>
             <!-- 11. Korteste vei fra alle til alle -->
             <div class="flex flex-col">
-              <h2>11. Korteste vei fra alle til alle</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Forgjengerstrukturen</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Floyd Warshall</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Transitive Closure</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Johnson</a>
+              <h2 class="sidebar-title">11. Korteste vei fra alle til alle</h2>
+              <a href="#" class="sidebar-links">Forgjengerstrukturen</a>
+              <a href="#" class="sidebar-links">Floyd Warshall</a>
+              <a href="#" class="sidebar-links">Transitive Closure</a>
+              <a href="#" class="sidebar-links">Johnson</a>
             </div>
             <!-- 12. Maksimal flyt -->
             <div class="flex flex-col">
-              <h2>12. Maksimal flyt</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Flytnett, flyt og maks-flyt-problemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">antiparallelle kanter og flere kilder og sluk</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Restnettet til et flytnett</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Oppheve flyt</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Forøkende sti (Augmenthing paths)</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Snitt, snittkapasitet, og minimalt snitt</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">maks-flyt/min-snitt teoremet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Ford-fulkerson-method og ford-fulkerson</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Edmon Karp</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Maks flyt og bipartitt matching</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Heltallsteoremet (integrality theorem)</a>
+              <h2 class="sidebar-title">12. Maksimal flyt</h2>
+              <a href="#" class="sidebar-links">Flytnett, flyt og maks-flyt-problemet</a>
+              <a href="#" class="sidebar-links">antiparallelle kanter og flere kilder og sluk</a>
+              <a href="#" class="sidebar-links">Restnettet til et flytnett</a>
+              <a href="#" class="sidebar-links">Oppheve flyt</a>
+              <a href="#" class="sidebar-links">Forøkende sti (Augmenthing paths)</a>
+              <a href="#" class="sidebar-links">Snitt, snittkapasitet, og minimalt snitt</a>
+              <a href="#" class="sidebar-links">maks-flyt/min-snitt teoremet</a>
+              <a href="#" class="sidebar-links">Ford-fulkerson-method og ford-fulkerson</a>
+              <a href="#" class="sidebar-links">Edmon Karp</a>
+              <a href="#" class="sidebar-links">Maks flyt og bipartitt matching</a>
+              <a href="#" class="sidebar-links">Heltallsteoremet (integrality theorem)</a>
             </div>
             <!-- 5. R13. NP-kompletthet -->
             <div class="flex flex-col">
-              <h2>13. NP-kompletthet</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">optimerings - og beslutnings-problemer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">koding av en instans</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Løsningen på det binære Ryggsekkproblemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Forskjellen på konkrete og abstrakte problemer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Beslutningsproblemer som formelle språk</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Klassene P, NP og co-NP</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Redusibilitetsrelasjonen</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">NP-hardhet og NP-kompletthet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Hypotesen om forholdet mellom P, NP og NPC</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">NP-kompletthet bevist ved en reduksjon</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">NP-komplette problemene i pensum</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Det binære Ryggsekkproblemet er NP-hardt</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Lengste enkle vei problemet er NP-hardt</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Konstruere enkle NP-kompletthetsbevis</a>
+              <h2 class="sidebar-title">13. NP-kompletthet</h2>
+              <a href="#" class="sidebar-links">optimerings - og beslutnings-problemer</a>
+              <a href="#" class="sidebar-links">koding av en instans</a>
+              <a href="#" class="sidebar-links">Løsningen på det binære Ryggsekkproblemet</a>
+              <a href="#" class="sidebar-links">Forskjellen på konkrete og abstrakte problemer</a>
+              <a href="#" class="sidebar-links">Beslutningsproblemer som formelle språk</a>
+              <a href="#" class="sidebar-links">Klassene P, NP og co-NP</a>
+              <a href="#" class="sidebar-links">Redusibilitetsrelasjonen</a>
+              <a href="#" class="sidebar-links">NP-hardhet og NP-kompletthet</a>
+              <a href="#" class="sidebar-links">Hypotesen om forholdet mellom P, NP og NPC</a>
+              <a href="#" class="sidebar-links">NP-kompletthet bevist ved en reduksjon</a>
+              <a href="#" class="sidebar-links">NP-komplette problemene i pensum</a>
+              <a href="#" class="sidebar-links">Det binære Ryggsekkproblemet er NP-hardt</a>
+              <a href="#" class="sidebar-links">Lengste enkle vei problemet er NP-hardt</a>
+              <a href="#" class="sidebar-links">Konstruere enkle NP-kompletthetsbevis</a>
             </div>
           </div>
         </section>
-        <section id="content" class="bg-gray-400">
+        <!-- Alt innholdet her -->
+        <section id="content" class="bg-gray-400 col-span-4">
           <div class="flex flex-col">
             <!-- Problemer og algoritmer -->
             <div class="flex flex-col">
-              <h2>1. Problemer og algoritmer</h2>
-              <h3>Pseudokode-konvensjoner</h3>
-              <h3>Random access machine modellen</h3>
-              <h3>Problem, instans og problemstørrelse</a>
-              <h3>Definere asymptotisk notasjon</h3>
-              <h3>Best case, Worst case og Average case</a>
-              <h3>Løkkeinvarianter og Induksjon</h3>
-              <h3>Rekursiv Dekomponering</h3>
-              <h3>Insertion sort</a>
+              <h2 class="content-title">1. Problemer og algoritmer</h2>
+              <h3 class="content-subtitle">Pseudokode-konvensjoner</h3>
+              <p class="content-paragraph"></p>
+              <h3 class="content-subtitle">Random access machine modellen</h3>
+              <h3 class="content-subtitle">Problem, instans og problemstørrelse</a>
+              <h3 class="content-subtitle">Definere asymptotisk notasjon</h3>
+              <h3 class="content-subtitle">Best case, Worst case og Average case</a>
+              <h3 class="content-subtitle">Løkkeinvarianter og Induksjon</h3>
+              <h3 class="content-subtitle">Rekursiv Dekomponering</h3>
+              <h3 class="content-subtitle">Insertion sort</a>
             </div>
             <!-- Datastrukturer -->
             <div class="flex flex-col">
-              <h2>2. Datastrukturer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Stakker og Køer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Lenkede Lister</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Pekeere og Objekter</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Direkte Adressering og Hashtabeller</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Konfliktløsning med Kjeding</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Grunnleggende Hashfunksjoner</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Amortisert Analyse</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Dynamiske Tabeller</a>
+              <h2 class="content-title">2. Datastrukturer</h2>
+              <h3 class="content-subtitle">Stakker og Køer</h3>
+              <p class="content-paragraph"></p>
+              <h3 class="content-subtitle">Lenkede Lister</h3>
+              <h3 class="content-subtitle">Pekere og Objekter</a>
+              <h3 class="content-subtitle">Direkte Adressering og Hashtabeller</h3>
+              <h3 class="content-subtitle">Konfliktløsning med Kjeding</a>
+              <h3 class="content-subtitle">Grunnleggende Hashfunksjoner</h3>
+              <h3 class="content-subtitle">mortisert Analyse</h3>
+              <h3 class="content-subtitle">Dynamiske Tabeller</a>
             </div>
             <!-- Splitt og Hersk -->
             <div class="flex flex-col">
-              <h2 >3. Splitt og Hersk</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Designmetoden Divide and Conquer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Maximum Subarray-problemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Bisect og Bisect0</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Merge Sort</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Quicksort og Randomized-Quicksort</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">substitusjon, Rekurrenstrær og masterteoremet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Iterasjonsmetoden</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Variabelskifte</a>
+              <h2 class="content-title" >3. Splitt og Hersk</h2>
+              <h3 class="content-subtitle">Designmetoden Divide and Conquer</h3>
+              <h3 class="content-subtitle">Maximum Subarray-problemet</h3>
+              <h3 class="content-subtitle">Bisect og Bisect0</h3>
+              <h3 class="content-subtitle">Merge Sort</h3>
+              <h3 class="content-subtitle">Quicksort og Randomized-Quicksort</h3>
+              <h3 class="content-subtitle">substitusjon, Rekurrenstrær og masterteoremet</h3>
+              <h3 class="content-subtitle">Iterasjonsmetoden</h3>
+              <h3 class="content-subtitle">Variabelskifte</h3>
             </div>
             <!-- 4. Rangering i lineær tid -->
             <div class="flex flex-col">
-              <h2>4. Rangering i lineær tid</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Grensen for sammenligningsbasert sortering i worst case</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Stabil Sortering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Counting Sort og Stabil Sortering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Radix Sort og Stabil Subrutine</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Bucket Sort</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Randomized-Select</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Select</a>
+              <h2 class="content-title">4. Rangering i lineær tid</h2>
+              <h3 class="content-subtitle">Grensen for sammenligningsbasert sortering i worst case</h3>
+              <h3 class="content-subtitle">Stabil Sortering</h3>
+              <h3 class="content-subtitle">Counting Sort og Stabil Sortering</h3>
+              <h3 class="content-subtitle">Radix Sort og Stabil Subrutine</h3>
+              <h3 class="content-subtitle">Bucket Sort</h3>
+              <h3 class="content-subtitle">Randomized-Select</h3>
+              <h3 class="content-subtitle">Select</h3>
             </div>
             <!-- 5. Rotfaste Trestrukturer -->
             <div class="flex flex-col">
-              <h2>5. Rotfaste trestrukturer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Heaps og Prioritetskøer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Heapsort</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Implementering av rotfaste trør</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Binære Søketrær</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Høyde på Binære Søketrær</a>
+              <h2 class="content-title">5. Rotfaste trestrukturer</h2>
+              <h3 class="content-subtitle">Heaps og Prioritetskøer</h3>
+              <h3 class="content-subtitle">Heapsort</h3>
+              <h3 class="content-subtitle">Implementering av rotfaste trør</h3>
+              <h3 class="content-subtitle">Binære Søketrær</h3>
+              <h3 class="content-subtitle">Høyde på Binære Søketrær</h3>
             </div>
             <!-- 6. Dynamisk programmering -->
             <div class="flex flex-col">
-              <h2>6. Dynamisk programmering</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Delinstansgraf</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Designmetoden Dynamisk Programmering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Memoisering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Iterasjon</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Løsning fra lagrede beslutninger</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Optimal Delstruktur</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Stavkutting</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Longest Common Subsequence</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Løsningen på det Binære Ryggsekkproblemet</a>
+              <h2 class="content-title">6. Dynamisk programmering</h2>
+              <h3 class="content-subtitle">Delinstansgraf</h3>
+              <h3 class="content-subtitle">Designmetoden Dynamisk Programmering</h3>
+              <h3 class="content-subtitle">Memoisering</h3>
+              <h3 class="content-subtitle">Iterasjon</h3>
+              <h3 class="content-subtitle">Løsning fra lagrede beslutninger</h3>
+              <h3 class="content-subtitle">Optimal Delstruktur</h3>
+              <h3 class="content-subtitle">Stavkutting</h3>
+              <h3 class="content-subtitle">Longest Common Subsequence</h3>
+              <h3 class="content-subtitle">Løsningen på det Binære Ryggsekkproblemet</h3>
             </div>
             <!-- 7. Grådige algoritmer -->
             <div class="flex flex-col">
-              <h2>7. Grådige algoritmer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Desingmetoden Grådighet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Grådighetsegenskapen</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Aktivitets utvelgelse</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Kontinuerlige Ryggsekkproblemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Huffman og Huffman Koder</a>
+              <h2 class="content-title">7. Grådige algoritmer</h2>
+              <h3 class="content-subtitle">Desingmetoden Grådighet</h3>
+              <h3 class="content-subtitle">Grådighetsegenskapen</h3>
+              <h3 class="content-subtitle">Aktivitets utvelgelse</h3>
+              <h3 class="content-subtitle">Kontinuerlige Ryggsekkproblemet</h3>
+              <h3 class="content-subtitle">Huffman og Huffman Koder</h3>
             </div>
             <!-- 8. Traversering av grafer -->
             <div class="flex flex-col">
-              <h2>8. Traversering av grafer</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Implementering av Grafer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">BFS og Korteste Veier</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">DFS, Paranteseteoremet og Hvit Sti Teoremet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">DFS kantklassifisering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Topologisk Sortering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">DFS implementasjon med Stack</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Traverseringstrær</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Traversering med vilkårlig Prioritetskø</a>
+              <h2 class="content-title">8. Traversering av grafer</h2>
+              <h3 class="content-subtitle">Implementering av Grafer</h3>
+              <h3 class="content-subtitle">BFS og Korteste Veier</h3>
+              <h3 class="content-subtitle">DFS, Paranteseteoremet og Hvit Sti Teoremet</h3>
+              <h3 class="content-subtitle">DFS kantklassifisering</h3>
+              <h3 class="content-subtitle">Topologisk Sortering</h3>
+              <h3 class="content-subtitle">DFS implementasjon med Stack</h3>
+              <h3 class="content-subtitle">Traverseringstrær</h3>
+              <h3 class="content-subtitle">Traversering med vilkårlig Prioritetskø</h3>
             </div>
             <!-- 9. Minimale spenntrær -->
             <div class="flex flex-col">
-              <h2>9. Minimale spenntrær</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Skog Implementasjon av Disjunkte Mengder</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Spenntrær og minimale Spenntrær</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Generisk MST</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Lette kanter er trygge kanter</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">MST Kruskal</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">MST Prim</a>
+              <h2 class="content-title">9. Minimale spenntrær</h2>
+              <h3 class="content-subtitle">Skog Implementasjon av Disjunkte Mengder</h3>
+              <h3 class="content-subtitle">Spenntrær og minimale Spenntrær</h3>
+              <h3 class="content-subtitle">Generisk MST</h3>
+              <h3 class="content-subtitle">Lette kanter er trygge kanter</h3>
+              <h3 class="content-subtitle">MST Kruskal</h3>
+              <h3 class="content-subtitle">MST Prim</h3>
             </div>
             <!-- 10. Korteste vei fra én til alle -->
             <div class="flex flex-col">
-              <h2>10. Korteste vei fra én til alle</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Varianter av korteste Vei Problemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Strukturen til Korteste Vei problemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Negative Sykler og korteste enkle vei</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Korteste og Lengste enkle vei</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Korteste vei tre</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Kant slakking og Relax</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Egenskaper ved korteste veier og slakking</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Bellman Ford</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Dag shortest paths</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Dag shortest paths og Dynamisk programmering</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Dijkstra</a>
+              <h2 class="content-title">10. Korteste vei fra én til alle</h2>
+              <h3 class="content-subtitle">Varianter av korteste Vei Problemet</h3>
+              <h3 class="content-subtitle">Strukturen til Korteste Vei problemet</h3>
+              <h3 class="content-subtitle">Negative Sykler og korteste enkle vei</h3>
+              <h3 class="content-subtitle">Korteste og Lengste enkle vei</h3>
+              <h3 class="content-subtitle">Korteste vei tre</h3>
+              <h3 class="content-subtitle">Kant slakking og Relax</h3>
+              <h3 class="content-subtitle">Egenskaper ved korteste veier og slakking</h3>
+              <h3 class="content-subtitle">Bellman Ford</h3>
+              <h3 class="content-subtitle">Dag shortest paths</h3>
+              <h3 class="content-subtitle">Dag shortest paths og Dynamisk programmering</h3>
+              <h3 class="content-subtitle">Dijkstra</h3>
             </div>
             <!-- 11. Korteste vei fra alle til alle -->
             <div class="flex flex-col">
-              <h2>11. Korteste vei fra alle til alle</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Forgjengerstrukturen</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Floyd Warshall</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Transitive Closure</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Johnson</a>
+              <h2 class="content-title">11. Korteste vei fra alle til alle</h2>
+              <h3 class="content-subtitle">Forgjengerstrukturen</h3>
+              <h3 class="content-subtitle">Floyd Warshall</h3>
+              <h3 class="content-subtitle">Transitive Closure</h3>
+              <h3 class="content-subtitle">Johnson</h3>
             </div>
             <!-- 12. Maksimal flyt -->
             <div class="flex flex-col">
-              <h2>12. Maksimal flyt</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Flytnett, flyt og maks-flyt-problemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">antiparallelle kanter og flere kilder og sluk</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Restnettet til et flytnett</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Oppheve flyt</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Forøkende sti (Augmenthing paths)</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Snitt, snittkapasitet, og minimalt snitt</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">maks-flyt/min-snitt teoremet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Ford-fulkerson-method og ford-fulkerson</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Edmon Karp</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Maks flyt og bipartitt matching</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Heltallsteoremet (integrality theorem)</a>
+              <h2 class="content-title">12. Maksimal flyt</h2>
+              <h3 class="content-subtitle">Flytnett, flyt og maks-flyt-problemet</h3>
+              <h3 class="content-subtitle">antiparallelle kanter og flere kilder og sluk</h3>
+              <h3 class="content-subtitle">Restnettet til et flytnett</h3>
+              <h3 class="content-subtitle">Oppheve flyt</h3>
+              <h3 class="content-subtitle">Forøkende sti (Augmenthing paths)</h3>
+              <h3 class="content-subtitle">Snitt, snittkapasitet, og minimalt snitt</h3>
+              <h3 class="content-subtitle">maks-flyt/min-snitt teoremet</h3>
+              <h3 class="content-subtitle">Ford-fulkerson-method og ford-fulkerson</h3>
+              <h3 class="content-subtitle">Edmon Karp</h3>
+              <h3 class="content-subtitle">Maks flyt og bipartitt matching</h3>
+              <h3 class="content-subtitle">Heltallsteoremet (integrality theorem)</h3>
             </div>
             <!-- 5. R13. NP-kompletthet -->
             <div class="flex flex-col">
-              <h2>13. NP-kompletthet</h2>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">optimerings - og beslutnings-problemer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">koding av en instans</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Løsningen på det binære Ryggsekkproblemet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Forskjellen på konkrete og abstrakte problemer</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Beslutningsproblemer som formelle språk</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Klassene P, NP og co-NP</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Redusibilitetsrelasjonen</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">NP-hardhet og NP-kompletthet</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Hypotesen om forholdet mellom P, NP og NPC</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">NP-kompletthet bevist ved en reduksjon</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">NP-komplette problemene i pensum</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Det binære Ryggsekkproblemet er NP-hardt</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Lengste enkle vei problemet er NP-hardt</a>
-              <a href="#" class="hover:font-bold text-xl mx-4 my-2 capitalize">Konstruere enkle NP-kompletthetsbevis</a>
+              <h2 class="content-title">13. NP-kompletthet</h2>
+              <h3 class="content-subtitle">optimerings - og beslutnings-problemer</h3>
+              <h3 class="content-subtitle">koding av en instans</h3>
+              <h3 class="content-subtitle">Løsningen på det binære Ryggsekkproblemet</h3>
+              <h3 class="content-subtitle">Forskjellen på konkrete og abstrakte problemer</h3>
+              <h3 class="content-subtitle">Beslutningsproblemer som formelle språk</h3>
+              <h3 class="content-subtitle">Klassene P, NP og co-NP</h3>
+              <h3 class="content-subtitle">Redusibilitetsrelasjonen</h3>
+              <h3 class="content-subtitle">NP-hardhet og NP-kompletthet</h3>
+              <h3 class="content-subtitle">Hypotesen om forholdet mellom P, NP og NPC</h3>
+              <h3 class="content-subtitle">NP-kompletthet bevist ved en reduksjon</h3>
+              <h3 class="content-subtitle">NP-komplette problemene i pensum</h3>
+              <h3 class="content-subtitle">Det binære Ryggsekkproblemet er NP-hardt</h3>
+              <h3 class="content-subtitle">Lengste enkle vei problemet er NP-hardt</h3>
+              <h3 class="content-subtitle">Konstruere enkle NP-kompletthetsbevis</h3>
             </div>
           </div>
         </section>
