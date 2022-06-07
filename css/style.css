@@ -423,6 +423,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+span {
+  font-weight: 700;
+}
+
+li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 *, ::before, ::after {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -476,16 +485,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 4 / span 4;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .flex {
   display: flex;
 }
@@ -529,21 +528,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.capitalize {
-  text-transform: capitalize;
 }
 
 .text-white {
@@ -643,9 +633,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
   border-bottom-width: 4px;
   --tw-border-opacity: 1;
-  border-color: rgb(113 113 122 / var(--tw-border-opacity));
+  border-color: rgb(82 82 91 / var(--tw-border-opacity));
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
   text-transform: capitalize;
 }
 
@@ -676,6 +667,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: left;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
@@ -694,9 +687,5 @@ Ensure the default browser behavior of the `hidden` attribute.
   .content-paragraph {
     width: 33.333333%;
   }
-}
-
-.hover\:font-bold:hover {
-  font-weight: 700;
 }
 

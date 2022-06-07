@@ -182,15 +182,63 @@
             <!-- Problemer og algoritmer -->
             <div class="flex flex-col">
               <h2 class="content-title">1. Problemer og algoritmer</h2>
+
               <h3 class="content-subtitle">Pseudokode-konvensjoner</h3>
-              <p class="content-paragraph"></p>
+              <p class="content-paragraph">
+                Pseudokoden i boka er basert på python/C og bruker en del matematisk notasjon som må skrives om med objekter og typer.
+              </p>
+
               <h3 class="content-subtitle">Random access machine modellen</h3>
-              <h3 class="content-subtitle">Problem, instans og problemstørrelse</a>
+              <p class="content-paragraph">
+                Dette er en enkjerne prosessor hvor alle instruksjoner er utført en etter en.
+              </p>
+              <h3 class="content-subtitle">Problem, instans og problemstørrelse</h3>
+                <p class="content-paragraph">
+                  Et <span>problem</span> er relasjonen mellom input og output, <span>instans</span> er inputen vi trenger for å finne løsningen på et problem, og <span>problemstørrelse</span> er lagringsplassen for en instans.
+
+                </p>
               <h3 class="content-subtitle">Definere asymptotisk notasjon</h3>
-              <h3 class="content-subtitle">Best case, Worst case og Average case</a>
+              
+                <ul class="flex flex-col content-paragraph">
+                  <li><span>O:</span> Øvre grense.</li>
+                  <li><span>Ω:</span> Nedre grense.</li>
+                  <li><span>Θ:</span> Kjøretid ved lik øvre og nedre grense.</li>
+                  <li><span>o:</span> Streng øvre grense hvor vi ikke tillater at elementer går over grensa vår.</li>
+                  <li><span>ω:</span> Streng nedre grense hvor vi ikke tillater at elementer går under grensa vår.</li>
+                </ul>
+
+              <h3 class="content-subtitle">Best case, Worst case og Average case</h3>
+              <ul class="flex flex-col content-paragraph">
+                <li><span>Best-case:</span> Den korteste kjøretiden vi får med gitt input.</li>
+                <li><span>Average-case:</span> Gjennomsnittlig kjøretid for gitt input.</li>
+                <li><span>Worst-case: </span>Den lengste kjøretiden vi får med gitt input. Er da en grense for hvor lang kjøretiden kan bli.</li>
+              </ul>
+                
+
               <h3 class="content-subtitle">Løkkeinvarianter og Induksjon</h3>
+              <ul class="flex flex-col content-paragraph">
+                 <li><span>Induksjon:</span> Er en bevismetode hvor vi starter med et grunntilfelle som vi viser, og deretter for k og k+1 tilfeller der vi kan bygge uendelig videre (uendelig stige). </li> 
+                 <li><span>Løkkeinvarianter:</span> Er det vi trenger for å forstå hvorfor en algoritme er korrekt. </li> 
+                 <li>Vi må da vise tre ting om <span>løkkeinvarianten;</span></li> 
+                 <ul class="flex flex-col content-paragraph">
+                  <li><span>Initialisering:</span> Den er sann før den første iterasjonen av løkken.</li>
+                  <li><span>Vedlikehold:</span> Den er sann før iterasjonen av løkken og er sann før neste iterasjonen.</li>
+                  <li><span>Terminering:</span> Når løkken terminerers, vil invarianten gi oss en verdifull egenskap som viser at algoritmen er korrekt.</li>
+                 </ul>
+              </ul>
+
               <h3 class="content-subtitle">Rekursiv Dekomponering</h3>
-              <h3 class="content-subtitle">Insertion sort</a>
+              <ul class="content-paragraph">
+                <li><span>Rekursiv dekomponering:</span> Vi deler opp problemet i mindre problemer og løser de rekursivt.</li>
+                <li><span>Induksjon over delinstanser:</span> Gir oss mulighet til å løse rekursiv dekomponering ved å finne delsvar til løsningen vår.</li>
+              </ul>
+              <h3 class="content-subtitle">Insertion sort</h3>
+                <ul class="flex flex-col content-paragraph">
+                  <li>Vi starter med å ta ut det minste tallet og deretter sortere resten rekursivt og til slutt sette inn det det minste tallet til en sortert sekvens.<li>
+                  <li><span>I beste tilfelle</span> har denne algoritmen <span>Θ(n)</span> i kjøretid dersom listen er allerede sortert.</li>
+                  <li><span>I verste tilfelle</span> har vi <span>Θ(n^2)</span>  på grunn av n * n-1 elementer sortert.</li>
+                </ul>
+
             </div>
             <!-- Datastrukturer -->
             <div class="flex flex-col">
@@ -198,12 +246,12 @@
               <h3 class="content-subtitle">Stakker og Køer</h3>
               <p class="content-paragraph"></p>
               <h3 class="content-subtitle">Lenkede Lister</h3>
-              <h3 class="content-subtitle">Pekere og Objekter</a>
+              <h3 class="content-subtitle">Pekere og Objekter</h3>
               <h3 class="content-subtitle">Direkte Adressering og Hashtabeller</h3>
-              <h3 class="content-subtitle">Konfliktløsning med Kjeding</a>
+              <h3 class="content-subtitle">Konfliktløsning med Kjeding</h3>
               <h3 class="content-subtitle">Grunnleggende Hashfunksjoner</h3>
               <h3 class="content-subtitle">mortisert Analyse</h3>
-              <h3 class="content-subtitle">Dynamiske Tabeller</a>
+              <h3 class="content-subtitle">Dynamiske Tabeller</h3>
             </div>
             <!-- Splitt og Hersk -->
             <div class="flex flex-col">
