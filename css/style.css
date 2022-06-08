@@ -477,6 +477,22 @@ li {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -497,8 +513,8 @@ li {
   display: none;
 }
 
-.w-1\/2 {
-  width: 50%;
+.max-h-full {
+  max-height: 100%;
 }
 
 .grid-cols-1 {
@@ -517,17 +533,20 @@ li {
   gap: 1rem;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
 
 .border-4 {
   border-width: 4px;
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .border-black {
