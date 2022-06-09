@@ -14,7 +14,7 @@
 
 /*Sidebar styles*/
 .sidebar-title {
-    @apply font-sans  hover:text-black text-gray-300 text-xl md:text-3xl p-4 uppercase border-b-4 w-full;
+    @apply font-sans hover:text-black text-gray-300 text-xl md:text-3xl p-4 uppercase border-b-4 w-full;
 }
 
 .sidebar-links {
@@ -24,7 +24,7 @@
 
 /*Content styles*/
 .content-title{
-    @apply font-sans font-bold text-gray-300 text-xl md:text-3xl p-4 uppercase border-b-4 w-full lg:w-1/2 xl:w-1/2;
+    @apply font-sans font-bold text-center text-gray-300 text-xl md:text-3xl p-4 uppercase border-b-4 w-full ;
 }
 
 .content-subtitle{
