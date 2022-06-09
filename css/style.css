@@ -481,16 +481,12 @@ li {
   position: fixed;
 }
 
-.top-0 {
-  top: 0px;
+.top-20 {
+  top: 5rem;
 }
 
 .bottom-0 {
   bottom: 0px;
-}
-
-.top-20 {
-  top: 5rem;
 }
 
 .m-4 {
@@ -579,10 +575,14 @@ li {
   font-family: Kdam Thmor Pro, sans-serif;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-weight: 700;
   text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.sidebar-title:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
@@ -698,26 +698,6 @@ li {
 }
 
 @media (min-width: 768px) {
-  .md\:left-\[600px\] {
-    left: 600px;
-  }
-
-  .md\:left-\[px\] {
-    left: px;
-  }
-
-  .md\:left-\[595px\] {
-    left: 595px;
-  }
-
-  .md\:left-\[580px\] {
-    left: 580px;
-  }
-
-  .md\:left-\[570px\] {
-    left: 570px;
-  }
-
   .md\:left-\[560px\] {
     left: 560px;
   }
